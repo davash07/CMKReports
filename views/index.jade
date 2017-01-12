@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  head
+    title= title
+  body
+    .wrapper
+      .container
+        img.logo(src='http://www.pacificmall.com.co/wp-content/uploads/logo-cinemark.png')
+        h1 Login
+        form.form(method='POST')
+          input#name(type='text', name='name', placeholder='Username')
+
+          input#encrypted_password(type='password', name='encrypted_password',  placeholder='Password')
+
+          button#submit(type='submit' onclick='validate()') Login
+      ul.bg-bubbles
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
+        li
