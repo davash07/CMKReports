@@ -9,8 +9,7 @@ var FailureCtrl = require('../controllers/failures');
 // // .post(FailureCtrl.add);
 //
 
-router.get('/failures', function(req, res, next) {
-    res.get(FailureCtrl.findAll);
-    res.json({message: 'dasasd'});
-});
+router.route('/failures')
+    .get(FailureCtrl.findAll);
+
 module.exports = router;

@@ -2,12 +2,11 @@ var FailureModel = require('../models/failure');
 
 //GET - Return all registers
 exports.findAll = function(req, res){
-
-    Failure.find(function(err, failures){
-        if(err) res.send(500, err.message);
-        console.log('GET /failures');
-        res.status(200).jsonp(failures);
-    });
+    FailureModel.getFailures(function(error, data)
+		{
+            console.log('GET /failures');
+            res.status(200).jsonp({ success: true, status_code: 200, status_message: "Failures", failures: data});
+		});
 };
 
 //GET - Return a register with specified ID
