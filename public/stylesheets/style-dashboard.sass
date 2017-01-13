@@ -1,0 +1,233 @@
+/* Import fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic)
+
+@import url(http://weloveiconfonts.com/api/?family=entypo)
+
+/* Entypo
+
+[class*="entypo-"]:before
+  font-family: 'entypo', sans-serif
+
+*
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+
+body
+  color: #797979
+  background: #EEE
+  font-family: 'Open Sans', sans-serif
+  font-size: 13px
+  margin-top: -70px
+
+a
+  &:link, &:visited, &:active
+    color: #fff
+    text-decoration: none
+  &:hover
+    color: rgba(255,255,255, 0.5)
+
+\::selection
+  background: crimson
+  color: #fff
+
+.wrapper
+  width: 100%
+  height: 100%
+
+header
+  margin-top: 70px
+  min-height: 55px
+  background: #6e0001
+  position: fixed
+  left: 0
+  right: 0
+  z-index: 1002
+
+/* NAVIGATION
+
+nav
+  margin-top: 70px
+  margin-left: -10px
+  width: 80px
+  height: 100%
+  position: fixed
+  background: #5f0004
+  padding-top: 70px
+  transition: all 0.5s ease
+  -webkit-transition: all 0.5s ease
+  z-index: 99
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    width: 100%
+    height: 55px
+    background: #6e0001
+  ul
+    position: relative
+    li
+      margin-left: -40px
+      padding: 10px
+      cursor: pointer
+      position: relative
+      transition: all 0.5s ease
+      -webkit-transition: all 0.5s ease
+      [class*="entypo-"]
+        display: inline
+        font-size: 30px
+        position: relative
+        left: 15px
+        transition: all 0.5s ease
+        -webkit-transition: all 0.5s ease
+    .menu-item
+      display: none
+      padding-left: 10px
+      font-size: 11px
+      text-transform: uppercase
+  &:hover ul [class*="entypo-"]
+    left: 0
+    font-size: 15px
+  ul li:hover
+    background: rgba(255, 255, 255, 0.25)
+    &:before
+      content: ''
+      border-color: transparent #EEE transparent transparent
+      right: 0
+      border-width: 10px
+      position: absolute
+      border-style: solid
+      top: 8px
+  a
+    &:link, &:visited, &:active, &:hover
+      color: #EEE
+  .subnav
+    display: none
+    background: #6e0001
+    li
+      padding: 10px
+      font-size: 10px
+      text-transform: uppercase
+      &:hover
+        background: #5f0004
+        border-left: 10px solid #fff
+        &:before
+          top: 6px
+      [class*="entypo-"]
+        top: 0
+        left: 0
+        font-size: 11px
+
+/* TEST NAV
+/* TEST NAV END
+/* NAVIGATION SUB MENU
+/* HEADER USERPANEL
+
+header .userpanel
+  width: 280px
+  height: 100%
+  position: absolute
+  top: 0
+  right: 50px
+  background: #6e0001
+  cursor: pointer
+  z-index: 100
+  .user
+    width: 100%
+    height: 100%
+    position: relative
+    text-align: center
+    color: white
+    > div:nth-child(-n+2)
+      border-right: 2px solid #6e0001
+  .notification
+    width: 60px
+    height: 100%
+    line-height: 60px
+    float: left
+    display: block
+    position: relative
+    [class*="entypo-"]
+      font-size: 20px
+      margin-right: 13px
+    .number
+      width: 20px
+      height: 20px
+      background: #2890E6
+      border-radius: 5px
+      line-height: 20px
+      position: absolute
+      top: 12px
+      right: 14px
+      z-index: -1
+  .picture
+    width: 60px
+    height: 100%
+    line-height: 55px
+    float: left
+    display: block
+    position: relative
+    img
+      width: 100%
+      height: 100%
+      padding: 5px
+      border-radius: 7px
+      overflow: hidden
+      filter: grayscale(0.8)
+      -webkit-filter: grayscale(0.8)
+      &:hover
+        filter: grayscale(0)
+        -webkit-filter: grayscale(0)
+  .name
+    width: 160px
+    height: 100%
+    line-height: 55px
+    float: left
+    display: block
+    position: relative
+    text-align: left
+    padding: 0 10px
+    [class*="entypo-"]
+      position: absolute
+      font-size: 20px
+      right: 15px
+      transition: all 0.5s ease
+      -webkit-transition: all 0.5s ease
+
+/* CONTENT
+
+.main-content
+  height: calc(100% - 55px)
+  margin-left: 80px
+  transition: all 0.5s ease
+  -webkit-transition: all 0.5s ease
+
+.container
+  width: 100%
+  height: 100%
+  display: inline-block
+  margin-top: 55px
+  padding: 15px
+  background: #EEE
+
+.nav-hover
+  width: 150px
+
+.push
+  margin-left: 150px
+
+.arrow
+  transform: rotate(180deg)
+  -webkit-transform: rotate(180deg)
+  -moz-transform: rotate(180deg)
+
+.logo img
+  margin-left: 20px
+  width: 250px
+
+.name
+  margin-right: -50px
+
+.picture
+  margin-left: 50px
+
+/*# sourceMappingURL=style-dashboard.css.map

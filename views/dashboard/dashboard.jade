@@ -1,3 +1,52 @@
 //
    Created by devios on 12/01/17.
+extends layout
 
+block content
+    head
+    body
+        section.wrapper
+            header
+                section
+                .logo
+                    img(src='/images/logoApp.jpg')
+                    //img(src='http://vignette3.wikia.nocookie.net/mall/images/2/2d/Cinemark.png/revision/latest?cb=20130531233609&path-prefix=es')
+
+                .userpanel
+                    .user
+                        .picture
+                            img(src='https://lh3.googleusercontent.com/rfHMSlyQw8uMg2h4do6Pj88BR10pO93-rNqXSqnNPbOtM2Qse1dnCh_yZWltp8xL6w=w300', alt='User Name')
+                        .name
+                            | Administrador
+                            //span.entypo-down-open
+                        .notification
+                            a(href="/logout")
+                                span.entypo-logout
+            aside
+                nav(role='navigation')
+                    ul
+                        li
+                            a(href='#')
+                                span.entypo-newspaper
+                                span.menu-item Areas
+                        li
+                            a(href='#')
+                                span.entypo-vcard
+                                span.menu-item Perfiles
+                        li
+                            a(href='#')
+                                span.entypo-users
+                                span.menu-item Empleados
+                        li
+                            a(href='#')
+                                span.entypo-bookmarks
+                                span.menu-item Ciudades
+                        li.has-sub
+                            a(href='#')
+                                span.entypo-tools
+                                span.menu-item Fallas
+
+            section.main-content
+                .container
+                    ifr
+            footer

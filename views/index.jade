@@ -7,14 +7,17 @@ block content
   body
     .wrapper
       .container
-        img.logo(src='http://www.pacificmall.com.co/wp-content/uploads/logo-cinemark.png')
+        img.logo(src='/images/logoApp.jpg')
+        //img.logo(src='http://www.pacificmall.com.co/wp-content/uploads/logo-cinemark.png')
         h1 Login
         form.form(method='POST')
-          input#name(type='text', name='name', placeholder='Username')
+          input(type='text', name='name', placeholder='Username')
 
-          input#encrypted_password(type='password', name='encrypted_password',  placeholder='Password')
+          input(type='password', name='encrypted_password',  placeholder='Password')
 
-          button#submit(type='submit' onclick='validate()') Login
+          button(type='submit') Login
+        //- each message in flash
+        //        h4(style="color: red;") #{message}
       ul.bg-bubbles
         li
         li

@@ -11,7 +11,7 @@ function validate(){
     if ( name == "Admin" && encrypted_password == "Admin"){
         alert ("Bienvenido "+ name);
         window.localStorage.setItem('', document.getElementById('name').value);
-        window.location = ""; //redirecting to other page
+        window.location = "../../views/index.jade"; //redirecting to other page
         return false;
     }
     else{
