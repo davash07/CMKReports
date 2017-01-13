@@ -11,5 +11,4 @@ var FailureCtrl = require('../controllers/failures');
 
 router.route('/failures')
     .get(FailureCtrl.findAll);
-
 module.exports = router;

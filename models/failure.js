@@ -17,6 +17,6 @@ failureModel.getFailures = function(callback)
 			}
 		});
 	}
-}
+};
 
 module.exports = failureModel;
