@@ -1,8 +1,22 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var connection = require("../config/connection");
+ 
+var failureModel = {};
+ 
+failureModel.getFailures = function(callback)
+{
+	if (connection)
+	{
+		connection.query('SELECT * FROM failures', function(error, rows) {
+			if(error)
+			{
+				throw error;
+			}
+			else
+			{
+				callback(null, rows);
+			}
+		});
+	}
+}
 
-var failureSchema = new Schema({
-   name: { type: String }
-});
-
-module.exports = mongoose.model('Failure', failureSchema);
+module.exports = failureModel;
