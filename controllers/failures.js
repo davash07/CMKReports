@@ -6,7 +6,7 @@ var Failure = mongoose.model('Failure');
 exports.findAll = function(req, res){
     Failure.find(function(err, failures){
         if(err) res.send(500, err.message);
-        console.log('GET /failures')
+        console.log('GET /failures');
         res.status(200).jsonp(failures);
     });
 };
