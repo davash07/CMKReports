@@ -6,19 +6,19 @@ cityModel.getCities = function(callback)
 {
 	if (connection)
 	{
-		connection.query('SELECT * FROM cities', function(error_cities, rows_cities) {
-			if(error_cities)
+		connection.query('SELECT * FROM cities', function(err, rows) {
+			if(err)
 			{
-				throw error_cities;
+				throw err;
 			}
 			else
 			{
-                var cities = [];
-                for(var k in rows_cities) {
-                    add_theaters(rows_cities[k], function(object){
-                        cities.push(object);
-                        if(cities.length === rows_cities.length){
-                            callback(null, cities);   
+                var cont = 0;
+                for(var k in rows) {
+                    add_theaters(rows[k], function(object){
+                        cont += 1;
+                        if(rows.length === cont){
+                            callback(null, rows);
                         }
                     });
                 }

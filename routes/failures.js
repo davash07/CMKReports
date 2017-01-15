@@ -9,6 +9,6 @@ var FailureCtrl = require('../controllers/failures');
 // // .post(FailureCtrl.add);
 //
 
-router.route('/failures')
+router.route('/v1/failures')
     .get(FailureCtrl.findAll);
 module.exports = router;

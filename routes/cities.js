@@ -4,7 +4,7 @@ var CityCtrl = require('../controllers/cities');
 
 
 // API routes
-router.route('/cities')
+router.route('/v1/cities')
  .get(CityCtrl.findAll);
 
 module.exports = router;
